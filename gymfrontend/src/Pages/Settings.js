@@ -18,11 +18,11 @@ function Settings() {
     email: 'info@fitzonegym.com'
   });
 
-  const [generalData, setGeneralData] = useState({
-    currency: 'INR (₹)',
-    timezone: 'Asia/Kolkata',
-    dateFormat: 'DD/MM/YYYY'
-  });
+  // const [generalData, setGeneralData] = useState({
+  //   currency: 'INR (₹)',
+  //   timezone: 'Asia/Kolkata',
+  //   dateFormat: 'DD/MM/YYYY'
+  // });
 
   const [notifications, setNotifications] = useState({
     membershipExpiry: true,
@@ -62,16 +62,16 @@ function Settings() {
   };
 
 
-  const handleGeneralChange = (e) => {
+  // const handleGeneralChange = (e) => {
 
-    const { name, value } = e.target;
+  //   const { name, value } = e.target;
 
-    setGeneralData({
-      ...generalData,
-      [name]: value
-    });
+  //   setGeneralData({
+  //     ...generalData,
+  //     [name]: value
+  //   });
 
-  };
+  // };
 
 
   const handlePasswordChange = (e) => {
@@ -106,9 +106,9 @@ function Settings() {
   };
 
 
-  const saveGeneralSettings = () => {
-    alert('General settings saved successfully.');
-  };
+  // const saveGeneralSettings = () => {
+  //   alert('General settings saved successfully.');
+  // };
 
 
   const changePassword = async () => {
