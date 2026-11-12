@@ -1,0 +1,781 @@
+.plans-page {
+  width: 100%;
+}
+
+
+/* ============================= */
+/* Header */
+/* ============================= */
+
+.plans-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 30px;
+}
+
+.plans-header h1 {
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+.plans-header p {
+  color: #6b7280;
+}
+
+
+/* ============================= */
+/* Add Plan Button */
+/* ============================= */
+
+.add-plan-btn {
+  background-color: #4f46e5;
+
+  color: white;
+
+  border: none;
+
+  padding: 12px 20px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-size: 14px;
+
+  transition: 0.2s;
+}
+
+.add-plan-btn:hover {
+  background-color: #4338ca;
+
+  transform: translateY(-1px);
+}
+
+
+/* ============================= */
+/* Plans Grid */
+/* ============================= */
+
+.plans-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 20px;
+}
+
+
+/* ============================= */
+/* Plan Card */
+/* ============================= */
+
+.plan-card {
+  background-color: white;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 14px;
+
+  padding: 22px;
+
+  transition: 0.2s;
+}
+
+.plan-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+
+/* ============================= */
+/* Card Top */
+/* ============================= */
+
+.plan-card-top {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+.plan-icon {
+  width: 46px;
+
+  height: 46px;
+
+  border-radius: 10px;
+
+  background-color: #eef2ff;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  font-size: 21px;
+}
+
+.plan-status {
+  background-color: #dcfce7;
+
+  color: #15803d;
+
+  padding: 5px 10px;
+
+  border-radius: 20px;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+
+/* ============================= */
+/* Plan Information */
+/* ============================= */
+
+.plan-info h2 {
+  font-size: 20px;
+
+  color: #111827;
+
+  margin-bottom: 5px;
+}
+
+.plan-duration {
+  color: #4f46e5;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  margin-bottom: 12px;
+}
+
+.plan-description {
+  color: #6b7280;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+
+  min-height: 42px;
+}
+
+
+/* ============================= */
+/* Price */
+/* ============================= */
+
+.plan-price {
+  margin-top: 22px;
+
+  padding: 15px;
+
+  background-color: #f9fafb;
+
+  border-radius: 9px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.plan-price span {
+  color: #6b7280;
+
+  font-size: 11px;
+}
+
+.plan-price strong {
+  color: #111827;
+
+  font-size: 22px;
+}
+
+
+/* ============================= */
+/* Footer */
+/* ============================= */
+
+.plan-footer {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-top: 20px;
+
+  padding-top: 16px;
+
+  border-top: 1px solid #f0f0f0;
+}
+
+.plan-members {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: #6b7280;
+
+  font-size: 12px;
+}
+
+
+/* ============================= */
+/* Edit Button */
+/* ============================= */
+
+.edit-plan-btn {
+  border: none;
+
+  background-color: #f3f4f6;
+
+  color: #374151;
+
+  padding: 7px 13px;
+
+  border-radius: 7px;
+
+  font-size: 11px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.edit-plan-btn:hover {
+  background-color: #e5e7eb;
+}
+
+
+/* ============================= */
+/* Responsive */
+/* ============================= */
+
+@media (max-width: 800px) {
+
+  .plans-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .plans-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 15px;
+  }
+
+}
+/* ============================= */
+/* Add Plan Modal */
+/* ============================= */
+
+.plan-modal-overlay {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.45);
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1000;
+}
+
+
+.plan-modal {
+  width: 600px;
+
+  max-height: 90vh;
+
+  background-color: white;
+
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+
+  animation: planModalOpen 0.2s ease;
+}
+
+
+@keyframes planModalOpen {
+
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+/* ============================= */
+/* Modal Header */
+/* ============================= */
+
+.plan-modal-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  padding: 22px;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+
+.plan-modal-header h2 {
+  font-size: 20px;
+
+  margin-bottom: 5px;
+}
+
+
+.plan-modal-header p {
+  color: #6b7280;
+
+  font-size: 13px;
+}
+
+
+.plan-close-btn {
+  border: none;
+
+  background: none;
+
+  font-size: 26px;
+
+  color: #6b7280;
+
+  cursor: pointer;
+}
+
+
+.plan-close-btn:hover {
+  color: #111827;
+}
+
+
+/* ============================= */
+/* Modal Body */
+/* ============================= */
+
+.plan-modal-body {
+  padding: 25px;
+
+  max-height: 60vh;
+
+  overflow-y: auto;
+}
+
+
+.plan-form-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 18px;
+}
+
+
+.plan-form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+
+.plan-form-group.full-width {
+  grid-column: span 2;
+}
+
+
+.plan-form-group label {
+  font-size: 13px;
+
+  font-weight: 600;
+
+  color: #374151;
+}
+
+
+.plan-form-group input,
+.plan-form-group select,
+.plan-form-group textarea {
+  width: 100%;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 8px;
+
+  padding: 11px 12px;
+
+  font-size: 13px;
+
+  outline: none;
+
+  font-family: Arial, sans-serif;
+
+  background-color: white;
+}
+
+
+.plan-form-group input:focus,
+.plan-form-group select:focus,
+.plan-form-group textarea:focus {
+  border-color: #4f46e5;
+}
+
+
+.plan-form-group textarea {
+  resize: vertical;
+}
+
+
+/* ============================= */
+/* Duration Input */
+/* ============================= */
+
+.duration-input {
+  display: flex;
+
+  align-items: center;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 8px;
+
+  overflow: hidden;
+}
+
+
+.duration-input input {
+  border: none;
+
+  border-radius: 0;
+
+  flex: 1;
+}
+
+
+.duration-input input:focus {
+  border: none;
+}
+
+
+.duration-input span {
+  padding: 0 12px;
+
+  color: #6b7280;
+
+  font-size: 12px;
+}
+
+
+/* ============================= */
+/* Price Input */
+/* ============================= */
+
+.price-input {
+  display: flex;
+
+  align-items: center;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 8px;
+
+  overflow: hidden;
+}
+
+
+.price-input span {
+  padding-left: 12px;
+
+  color: #6b7280;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+
+.price-input input {
+  border: none;
+
+  border-radius: 0;
+
+  flex: 1;
+}
+
+
+.price-input input:focus {
+  border: none;
+}
+
+
+/* ============================= */
+/* Modal Footer */
+/* ============================= */
+
+.plan-modal-footer {
+  padding: 15px 22px;
+
+  border-top: 1px solid #e5e7eb;
+
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 10px;
+}
+
+
+.plan-cancel-btn {
+  border: none;
+
+  background-color: #f3f4f6;
+
+  color: #374151;
+
+  padding: 10px 18px;
+
+  border-radius: 7px;
+
+  cursor: pointer;
+}
+
+
+.plan-cancel-btn:hover {
+  background-color: #e5e7eb;
+}
+
+
+.save-plan-btn {
+  border: none;
+
+  background-color: #4f46e5;
+
+  color: white;
+
+  padding: 10px 18px;
+
+  border-radius: 7px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+
+.save-plan-btn:hover {
+  background-color: #4338ca;
+
+  transform: translateY(-1px);
+}
+
+
+/* ============================= */
+/* Responsive */
+/* ============================= */
+
+@media (max-width: 650px) {
+
+  .plan-modal {
+    width: 90%;
+  }
+
+  .plan-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .plan-form-group.full-width {
+    grid-column: span 1;
+  }
+
+}
+/* ============================= */
+/* Plans Filters */
+/* ============================= */
+
+.plans-filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.plans-search {
+  flex: 1;
+  max-width: 400px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0 12px;
+}
+
+.plans-search span {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.plans-search input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 13px;
+  color: #374151;
+}
+
+.plans-filters select {
+  height: 42px;
+  padding: 0 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: white;
+  color: #374151;
+  font-size: 13px;
+  outline: none;
+  cursor: pointer;
+}
+
+.plans-filters select:focus {
+  border-color: #4f46e5;
+}
+
+
+/* ============================= */
+/* Responsive */
+/* ============================= */
+
+@media (max-width: 650px) {
+
+  .plans-filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .plans-search {
+    max-width: none;
+  }
+
+}
+
+
+.field-error {
+  display: block;
+  color: #dc2626;
+  font-size: 12px;
+  line-height: 1.4;
+  margin-top: 5px;
+}
+
+.input-error {
+  border-color: #dc2626 !important;
+}
+
+.input-error:focus {
+  outline-color: #dc2626;
+}
+
+
+.error-message {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin: 16px 0;
+  padding: 12px 16px;
+  color: #b91c1c;
+  background: #fee2e2;
+  border-radius: 8px;
+}
+
+.error-message button {
+  border: none;
+  background: transparent;
+  color: inherit;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.plans-message {
+  padding: 24px 0;
+  text-align: center;
+}
+
+.plan-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.delete-plan-btn {
+  padding: 8px 12px;
+  border: 1px solid #dc2626;
+  border-radius: 6px;
+  background: transparent;
+  color: #dc2626;
+  cursor: pointer;
+}
+
+.delete-plan-btn:hover {
+  background: #fee2e2;
+}
+
+.plan-form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.plan-form-group input,
+.plan-form-group select,
+.plan-form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.plan-form-group textarea {
+  resize: vertical;
+  font: inherit;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+

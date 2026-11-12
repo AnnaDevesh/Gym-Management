@@ -1,0 +1,683 @@
+/* ============================= */
+/* Trainers Page */
+/* ============================= */
+
+.trainers-page {
+  width: 100%;
+}
+
+
+/* ============================= */
+/* Header */
+/* ============================= */
+
+.trainers-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+}
+
+.trainers-header h1 {
+  margin: 0 0 5px;
+
+  font-size: 24px;
+  color: #111827;
+}
+
+.trainers-header p {
+  margin: 0;
+
+  font-size: 13px;
+  color: #6b7280;
+}
+
+
+/* ============================= */
+/* Add Button */
+/* ============================= */
+
+.add-trainer-btn {
+  border: none;
+
+  background-color: #4f46e5;
+  color: white;
+
+  padding: 11px 16px;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: background-color 0.2s ease;
+}
+
+.add-trainer-btn:hover {
+  background-color: #4338ca;
+}
+
+
+/* ============================= */
+/* Filters */
+/* ============================= */
+
+.trainers-filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 20px;
+}
+
+.trainers-search {
+  width: 400px;
+  max-width: 100%;
+
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 0 12px;
+
+  background-color: white;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 8px;
+
+  box-sizing: border-box;
+}
+
+.trainers-search span {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.trainers-search input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  font-size: 13px;
+
+  color: #374151;
+}
+
+.trainers-filters select {
+  height: 42px;
+
+  padding: 0 12px;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 8px;
+
+  background-color: white;
+
+  color: #374151;
+
+  font-size: 13px;
+
+  outline: none;
+
+  cursor: pointer;
+}
+
+
+/* ============================= */
+/* Trainers Grid */
+/* ============================= */
+
+.trainers-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
+}
+
+
+/* ============================= */
+/* Trainer Card */
+/* ============================= */
+
+.trainer-card {
+  background-color: white;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 10px;
+
+  padding: 20px;
+
+  box-sizing: border-box;
+
+  transition: box-shadow 0.2s ease;
+}
+
+.trainer-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+}
+
+
+/* ============================= */
+/* Card Top */
+/* ============================= */
+
+.trainer-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 16px;
+}
+
+.trainer-avatar {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+
+  background-color: #eef2ff;
+  color: #4f46e5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.trainer-status {
+  padding: 5px 9px;
+
+  border-radius: 20px;
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.trainer-status.active {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.trainer-status.inactive {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+
+/* ============================= */
+/* Trainer Info */
+/* ============================= */
+
+.trainer-info h2 {
+  margin: 0 0 5px;
+
+  font-size: 17px;
+  color: #111827;
+}
+
+.trainer-specialization {
+  margin: 0;
+
+  font-size: 12px;
+
+  color: #4f46e5;
+
+  font-weight: 500;
+}
+
+
+/* ============================= */
+/* Trainer Details */
+/* ============================= */
+
+.trainer-details {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 14px;
+
+  margin-top: 20px;
+
+  padding: 15px 0;
+
+  border-top: 1px solid #f3f4f6;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.trainer-detail {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+}
+
+.trainer-detail > span {
+  font-size: 15px;
+}
+
+.trainer-detail div {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.trainer-detail small {
+  font-size: 10px;
+
+  color: #9ca3af;
+}
+
+.trainer-detail strong {
+  font-size: 11px;
+
+  color: #374151;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* ============================= */
+/* Card Footer */
+/* ============================= */
+
+.trainer-footer {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 15px;
+}
+
+.trainer-footer > span {
+  font-size: 11px;
+
+  color: #6b7280;
+}
+
+.trainer-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-trainer-btn {
+  border: 1px solid #e5e7eb;
+
+  background-color: white;
+
+  color: #4f46e5;
+
+  padding: 7px 12px;
+
+  border-radius: 6px;
+
+  font-size: 11px;
+
+  cursor: pointer;
+}
+
+.edit-trainer-btn:hover {
+  background-color: #eef2ff;
+}
+
+.delete-trainer-btn {
+  border: 1px solid #fecaca;
+  background-color: white;
+  color: #dc2626;
+  padding: 7px 12px;
+  border-radius: 6px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.delete-trainer-btn:hover {
+  background-color: #fef2f2;
+}
+
+.delete-trainer-btn:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+
+
+/* ============================= */
+/* No Trainers */
+/* ============================= */
+
+.no-trainers {
+  grid-column: 1 / -1;
+
+  text-align: center;
+
+  background-color: white;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 10px;
+
+  padding: 50px 20px;
+}
+
+.no-trainers div {
+  font-size: 30px;
+}
+
+.no-trainers h3 {
+  margin: 10px 0 5px;
+
+  color: #374151;
+}
+
+.no-trainers p {
+  margin: 0;
+
+  font-size: 12px;
+
+  color: #9ca3af;
+}
+
+
+/* ============================= */
+/* Modal */
+/* ============================= */
+
+.trainer-modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  background-color: rgba(17, 24, 39, 0.5);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  box-sizing: border-box;
+
+  z-index: 500;
+}
+
+.trainer-modal {
+  width: 600px;
+  max-width: 100%;
+  max-height: 90vh;
+
+  background-color: white;
+
+  border-radius: 12px;
+
+  overflow: auto;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ============================= */
+/* Modal Header */
+/* ============================= */
+
+.trainer-modal-header {
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  padding: 20px;
+
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.trainer-modal-header h2 {
+  margin: 0 0 5px;
+
+  font-size: 18px;
+
+  color: #111827;
+}
+
+.trainer-modal-header p {
+  margin: 0;
+
+  font-size: 11px;
+
+  color: #9ca3af;
+}
+
+.trainer-close-btn {
+  border: none;
+
+  background: transparent;
+
+  font-size: 25px;
+
+  color: #6b7280;
+
+  cursor: pointer;
+
+  line-height: 1;
+}
+
+
+/* ============================= */
+/* Modal Body */
+/* ============================= */
+
+.trainer-modal-body {
+  padding: 20px;
+}
+
+.trainer-form-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 16px;
+}
+
+.trainer-form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.trainer-form-group label {
+  font-size: 12px;
+
+  font-weight: 500;
+
+  color: #374151;
+}
+
+.trainer-form-group input,
+.trainer-form-group select {
+  width: 100%;
+
+  height: 40px;
+
+  padding: 0 11px;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 7px;
+
+  box-sizing: border-box;
+
+  outline: none;
+
+  font-size: 12px;
+
+  color: #374151;
+}
+
+.trainer-form-group input:focus,
+.trainer-form-group select:focus {
+  border-color: #4f46e5;
+}
+
+
+/* Experience */
+
+.experience-input {
+  display: flex;
+
+  align-items: center;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 7px;
+
+  overflow: hidden;
+}
+
+.experience-input input {
+  border: none;
+
+  border-radius: 0;
+
+  flex: 1;
+}
+
+.experience-input span {
+  padding-right: 11px;
+
+  font-size: 11px;
+
+  color: #6b7280;
+}
+
+
+/* ============================= */
+/* Modal Footer */
+/* ============================= */
+
+.trainer-modal-footer {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  padding: 15px 20px;
+
+  border-top: 1px solid #f3f4f6;
+}
+
+.trainer-cancel-btn,
+.save-trainer-btn {
+  padding: 9px 15px;
+
+  border-radius: 7px;
+
+  font-size: 12px;
+
+  cursor: pointer;
+}
+
+.trainer-cancel-btn {
+  border: 1px solid #e5e7eb;
+
+  background-color: white;
+
+  color: #374151;
+}
+
+.save-trainer-btn {
+  border: none;
+
+  background-color: #4f46e5;
+
+  color: white;
+}
+
+.save-trainer-btn:hover {
+  background-color: #4338ca;
+}
+
+
+/* ============================= */
+/* Tablet */
+/* ============================= */
+
+@media (max-width: 1100px) {
+
+  .trainers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* ============================= */
+/* Mobile */
+/* ============================= */
+
+@media (max-width: 650px) {
+
+  .trainers-header {
+    align-items: flex-start;
+
+    gap: 15px;
+  }
+
+  .trainers-header h1 {
+    font-size: 21px;
+  }
+
+  .add-trainer-btn {
+    padding: 9px 11px;
+
+    white-space: nowrap;
+
+    font-size: 11px;
+  }
+
+  .trainers-filters {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .trainers-search {
+    width: 100%;
+  }
+
+  .trainers-filters select {
+    width: 100%;
+  }
+
+  .trainers-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trainer-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+}

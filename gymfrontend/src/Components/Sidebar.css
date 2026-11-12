@@ -1,0 +1,232 @@
+
+/* ============================= */
+/* Sidebar */
+/* ============================= */
+
+.sidebar {
+  width: 240px;
+  height: 100vh;
+
+  background-color: #111827;
+  color: white;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 24px 16px;
+
+  box-sizing: border-box;
+
+  z-index: 200;
+}
+
+
+/* ============================= */
+/* Logo */
+/* ============================= */
+
+.logo {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.logo h2 {
+  margin: 0;
+
+  font-size: 25px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.logo span {
+  display: block;
+
+  margin-top: 3px;
+
+  font-size: 10px;
+  color: #9ca3af;
+
+  letter-spacing: 2px;
+}
+
+
+/* ============================= */
+/* Menu */
+/* ============================= */
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+
+/* ============================= */
+/* Menu Items */
+/* ============================= */
+
+.menu-item {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 12px 14px;
+
+  border-radius: 8px;
+
+  color: #d1d5db;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transition: all 0.2s ease;
+}
+
+
+/* Icon */
+
+.menu-item:first-letter {
+  font-size: 17px;
+}
+
+
+/* Hover */
+
+.menu-item:hover {
+  background-color: #1f2937;
+  color: white;
+}
+
+
+/* Active */
+
+.menu-item.active {
+  background-color: #4f46e5;
+  color: white;
+}
+
+
+/* ============================= */
+/* Settings */
+/* ============================= */
+
+.settings {
+  margin-top: auto;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 12px 14px;
+
+  border-radius: 8px;
+
+  color: #d1d5db;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transition: all 0.2s ease;
+}
+
+.settings:hover {
+  background-color: #1f2937;
+  color: white;
+}
+
+.settings.active {
+  background-color: #4f46e5;
+  color: white;
+}
+
+
+/* ============================= */
+/* Tablet */
+/* ============================= */
+
+@media (max-width: 900px) {
+
+  .sidebar {
+    width: 210px;
+  }
+
+}
+
+
+/* ============================= */
+/* Mobile */
+/* ============================= */
+
+@media (max-width: 650px) {
+
+  .sidebar {
+    width: 100%;
+    height: 60px;
+
+    padding: 0 15px;
+
+    flex-direction: row;
+    align-items: center;
+
+    overflow-x: auto;
+  }
+
+  .logo {
+    margin: 0 20px 0 0;
+
+    flex-shrink: 0;
+  }
+
+  .logo h2 {
+    font-size: 18px;
+  }
+
+  .logo span {
+    display: none;
+  }
+
+  .menu {
+    flex-direction: row;
+    gap: 5px;
+
+    flex-shrink: 0;
+  }
+
+  .menu-item {
+    padding: 9px 10px;
+
+    gap: 6px;
+
+    white-space: nowrap;
+
+    font-size: 12px;
+  }
+
+  .menu-item:first-letter {
+    font-size: 14px;
+  }
+
+  .settings {
+    margin: 0 0 0 5px;
+
+    padding: 9px 10px;
+
+    white-space: nowrap;
+
+    font-size: 12px;
+
+    flex-shrink: 0;
+  }
+
+}
