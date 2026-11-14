@@ -14,7 +14,6 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/trainers")
-@CrossOrigin(origins = "http://localhost:3000")
 public class TrainerController {
 
     private final TrainerService trainerService;

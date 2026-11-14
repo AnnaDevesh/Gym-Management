@@ -110,11 +110,15 @@ public class SecurityConfig {
         );
 
         configuration.setAllowedMethods(
-                List.of("GET", "POST", "PUT", "DELETE", "OPTIONS")
+                List.of("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH")
         );
 
         configuration.setAllowedHeaders(
-                List.of("Authorization", "Content-Type")
+                List.of("*")
+        );
+
+        configuration.setExposedHeaders(
+                List.of("Authorization")
         );
 
         configuration.setAllowCredentials(true);
