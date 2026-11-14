@@ -3,8 +3,8 @@ import { useCallback, useEffect, useState } from 'react';
 import './Members.css';
 import { authenticatedFetch } from '../authSession';
 
-const API_URL = 'http://localhost:8081/api/members';
-const TRAINERS_API_URL = 'http://localhost:8081/api/trainers/active';
+const API_URL = `${process.env.REACT_APP_API_URL}/api/members`;
+const TRAINERS_API_URL = `${process.env.REACT_APP_API_URL}/api/trainers/active`;
 
 const getToken = () => {
   return localStorage.getItem('token') ||

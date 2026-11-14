@@ -37,7 +37,7 @@ function Dashboard() {
 
       try {
         const response = await authenticatedFetch(
-          'http://localhost:8081/api/dashboard',
+          `${process.env.REACT_APP_API_URL}/api/dashboard`,
           {
             method: 'GET',
             headers: {

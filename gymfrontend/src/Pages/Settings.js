@@ -140,7 +140,7 @@ function Settings() {
     setPasswordSaving(true);
 
     try {
-      const response = await authenticatedFetch('http://localhost:8081/api/account/password', {
+      const response = await authenticatedFetch(`${process.env.REACT_APP_API_URL}/api/account/password`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

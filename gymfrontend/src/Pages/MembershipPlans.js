@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import './MembershipPlans.css';
 import { authenticatedFetch } from '../authSession';
 
-const API_URL = 'http://localhost:8081/api/membership-plans';
+const API_URL = `${process.env.REACT_APP_API_URL}/api/membership-plans`;
 
 function getToken() {
   return localStorage.getItem('token') || sessionStorage.getItem('token');

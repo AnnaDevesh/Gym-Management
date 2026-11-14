@@ -81,7 +81,7 @@ function Navbar() {
 
       try {
         const response = await authenticatedFetch(
-          'http://localhost:8081/api/dashboard/notifications',
+          `${process.env.REACT_APP_API_URL}/api/dashboard/notifications`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
