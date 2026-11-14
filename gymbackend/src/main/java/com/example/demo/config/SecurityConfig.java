@@ -1,17 +1,18 @@
+
 package com.example.demo.config;
+
 import com.example.demo.Security.JwtAuthenticationFilter;
 import com.example.demo.Service.CustomUserDetailsService;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.http.HttpMethod;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
@@ -64,8 +65,9 @@ public class SecurityConfig {
 
                 .authorizeHttpRequests(auth -> auth
 
-                        .requestMatchers("/api/auth/**")
-                        .permitAll()
+                        .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
+
+                        .requestMatchers("/api/auth/**").permitAll()
 
                         .requestMatchers(HttpMethod.GET, "/api/trainers/active")
                         .hasAnyRole("ADMIN", "TRAINER")
@@ -73,8 +75,7 @@ public class SecurityConfig {
                         .requestMatchers("/api/members/**")
                         .hasAnyRole("ADMIN", "TRAINER")
 
-                        .requestMatchers(HttpMethod.GET,
-                                "/api/dashboard/**")
+                        .requestMatchers(HttpMethod.GET, "/api/dashboard/**")
                         .hasAnyRole("ADMIN", "TRAINER")
 
                         .requestMatchers(
@@ -85,8 +86,7 @@ public class SecurityConfig {
                         .requestMatchers("/api/dashboard/**", "/api/account/**")
                         .hasAnyRole("ADMIN", "TRAINER")
 
-                        .anyRequest()
-                        .authenticated()
+                        .anyRequest().authenticated()
                 )
 
                 .addFilterBefore(
@@ -103,7 +103,10 @@ public class SecurityConfig {
         CorsConfiguration configuration = new CorsConfiguration();
 
         configuration.setAllowedOrigins(
-                List.of("http://localhost:3000")
+                List.of(
+                        "http://localhost:3000",
+                        "https://gym-management-ochre-zeta.vercel.app"
+                )
         );
 
         configuration.setAllowedMethods(
@@ -113,6 +116,8 @@ public class SecurityConfig {
         configuration.setAllowedHeaders(
                 List.of("Authorization", "Content-Type")
         );
+
+        configuration.setAllowCredentials(true);
 
         UrlBasedCorsConfigurationSource source =
                 new UrlBasedCorsConfigurationSource();
